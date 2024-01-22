@@ -77,7 +77,7 @@ public class GovServiceImpl implements GovService {
         List<String> stopWords = FileUtil.readStopWords(stopWordsPath);
 
         // 分词
-        List<SegToken> segTokens = segmenter.process(text, JiebaSegmenter.SegMode.INDEX);
+        List<SegToken> segTokens = segmenter.process(text, JiebaSegmenter.SegMode.SEARCH);
 
         // 统计词频
         Map<String, Integer> wordFrequency = new HashMap<>();
